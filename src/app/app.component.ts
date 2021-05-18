@@ -15,9 +15,7 @@ export class AppComponent {
   onChangeLength(value: string) {
     const parsedValue = parseInt(value);
 
-    if (!isNaN(parsedValue)) {
-      this.length = parsedValue;
-    }
+    this.length = isNaN(parsedValue) ? 0 : parsedValue;
   }
 
   onChangeUseLetters() {
